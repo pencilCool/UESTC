@@ -9,9 +9,12 @@
 import UIKit
 
 class LoginViewController: UITableViewController {
+    @IBOutlet weak var nickname: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var confirm:  UIButton!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+               super.viewDidLoad()
       self.tableView.backgroundColor = UIColor.yhWaterBlueColor()
     }
 
@@ -21,5 +24,7 @@ class LoginViewController: UITableViewController {
     }
 
 
+
+   
 }
 
