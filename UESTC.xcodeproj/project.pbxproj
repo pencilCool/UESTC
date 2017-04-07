@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13559B3E5CAF41B1B13AB2C4 /* Pods_UESTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B09B1480828AE4F34A72ED1 /* Pods_UESTC.framework */; };
 		EC6C42A91E969106001D97F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C42A81E969106001D97F0 /* AppDelegate.swift */; };
 		EC6C42AB1E969106001D97F0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C42AA1E969106001D97F0 /* LoginViewController.swift */; };
 		EC6C42AE1E969106001D97F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6C42AC1E969106001D97F0 /* Main.storyboard */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B09B1480828AE4F34A72ED1 /* Pods_UESTC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UESTC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1AB5C85217977E1BF62E22D /* Pods-UESTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UESTC.release.xcconfig"; path = "Pods/Target Support Files/Pods-UESTC/Pods-UESTC.release.xcconfig"; sourceTree = "<group>"; };
+		B1046D1696A0B0F81826C66E /* Pods-UESTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UESTC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UESTC/Pods-UESTC.debug.xcconfig"; sourceTree = "<group>"; };
 		EC6C42A51E969106001D97F0 /* UESTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UESTC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6C42A81E969106001D97F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC6C42AA1E969106001D97F0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13559B3E5CAF41B1B13AB2C4 /* Pods_UESTC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7AF9AA757AF09EE745DE7F03 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1046D1696A0B0F81826C66E /* Pods-UESTC.debug.xcconfig */,
+				A1AB5C85217977E1BF62E22D /* Pods-UESTC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EC6C429C1E969106001D97F0 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +97,8 @@
 				EC6C42BC1E969106001D97F0 /* UESTCTests */,
 				EC6C42C71E969106001D97F0 /* UESTCUITests */,
 				EC6C42A61E969106001D97F0 /* Products */,
+				7AF9AA757AF09EE745DE7F03 /* Pods */,
+				F5A11819EAB9EA011C2901F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +168,14 @@
 			name = StoryBoard;
 			sourceTree = "<group>";
 		};
+		F5A11819EAB9EA011C2901F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B09B1480828AE4F34A72ED1 /* Pods_UESTC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC6C42CD1E969106001D97F0 /* Build configuration list for PBXNativeTarget "UESTC" */;
 			buildPhases = (
+				A0B120F284E94618436AB282 /* [CP] Check Pods Manifest.lock */,
 				EC6C42A11E969106001D97F0 /* Sources */,
 				EC6C42A21E969106001D97F0 /* Frameworks */,
 				EC6C42A31E969106001D97F0 /* Resources */,
+				B602968C91C4E27E21BA73BD /* [CP] Embed Pods Frameworks */,
+				F8B17338E661758E179A0D1A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -283,6 +310,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0B120F284E94618436AB282 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B602968C91C4E27E21BA73BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UESTC/Pods-UESTC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8B17338E661758E179A0D1A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UESTC/Pods-UESTC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EC6C42A11E969106001D97F0 /* Sources */ = {
@@ -439,6 +514,7 @@
 		};
 		EC6C42CE1E969106001D97F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1046D1696A0B0F81826C66E /* Pods-UESTC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4BADWEEE97;
@@ -452,6 +528,7 @@
 		};
 		EC6C42CF1E969106001D97F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1AB5C85217977E1BF62E22D /* Pods-UESTC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4BADWEEE97;
